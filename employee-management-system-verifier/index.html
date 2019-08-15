@@ -9,7 +9,7 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-<form class="form-inline" onsubmit="openModal()" id="myForm">
+<form>
     <div class="container">
         <h1>Employee Management System</h1>
         <fieldset>
@@ -32,8 +32,8 @@
             <br>
             <hr>
             <div class="clearfix">
-                <button type="submit" class="insertbtn">ADD EMPLOYEE</button>
-                <button type="reset" class="clearbtn">CLEAR SELECTION</button>
+                <input type="submit" onclick="onSubmit();" class="insertbtn" value="ADD EMPLOYEE"></input>
+                <input type="reset" class="clearbtn" value="CLEAR SELECTION"></input>
             </div>
         </fieldset>
     </div>
