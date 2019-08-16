@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>People Finder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="logo.png" type="image/x-icon">
     <script src="js/jquery.min.js"></script>
@@ -32,10 +35,26 @@
             <br>
             <hr>
             <div class="clearfix">
-                <input type="submit" onclick="onSubmit();" class="insertbtn" value="ADD EMPLOYEE"></input>
-                <input type="reset" class="clearbtn" value="CLEAR SELECTION"></input>
+                <button type="submit" class="insertbtn" data-toggle="modal" data-target="#myModal">ADD EMPLOYEE</button>
+                <button type="reset" class="clearbtn">CLEAR SELECTION</button>
             </div>
         </fieldset>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Success!</h4>
+                </div>
+                <div class="modal-body">
+                The employee has been added successfully!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </form>
 </body>
