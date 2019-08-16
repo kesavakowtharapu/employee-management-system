@@ -14,13 +14,10 @@
     <script src="js/jquery-ui.js"></script>
 </head>
 <body>
-<form>
     <div class="container">
         <h1>Employee Management System</h1>
         <fieldset>
             <legend>ADD EMPLOYEE</legend>
-            <p>Please fill the form to insert an employee into the database.</p>
-            <hr>
             <label><b>Name:</b></label>
             <input type="text" placeholder="Enter Name" name="name" id="name" required>
             <label><b>Date Of Birth:</b></label>
@@ -34,30 +31,14 @@
             <input type="text" placeholder="Enter Email" name="email" id="email" required>
             <label><b>Address:</b></label> <br>
             <textarea rows="4" cols="50" placeholder="Enter your address" id="address"></textarea>
-            <br>
-            <hr>
             <div class="clearfix">
-                <button type="submit" class="insertbtn" data-toggle="modal" data-target="#myModal">ADD EMPLOYEE</button>
+                <button type="submit" class="insertbtn" onclick="createEmployee()">ADD EMPLOYEE</button>
                 <button type="reset" class="clearbtn">CLEAR SELECTION</button>
             </div>
         </fieldset>
     </div>
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Success!</h4>
-                </div>
-                <div class="modal-body">
-                The employee has been added successfully!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+    <div id="dialog" title="Employee Data">
+        <p id="successMsg"></p>
     </div>
-</form>
 </body>
 </html>
